@@ -1,9 +1,113 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+        <style>
+        /* Nova Identidade Visual - Prática Extensionista V */
+:root {
+    --primary-color: #2c3e50;    /* Azul petróleo escuro */
+    --secondary-color: #3498db;  /* Azul brilhante */
+    --success-color: #27ae60;    /* Verde esmeralda */
+    --bg-body: #ecf0f1;          /* Cinza muito claro */
+    --text-dark: #2c3e50;
+    --white: #ffffff;
+}
+
+body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background-color: var(--bg-body);
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: var(--text-dark);
+}
+
+.login-container, .container {
+    background-color: var(--white);
+    width: 100%;
+    max-width: 500px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    border: 1px solid #dce1e2;
+}
+
+/* Header estilizado diferente da foto anterior */
+.login-header {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: var(--white);
+    padding: 35px 20px;
+    text-align: center;
+}
+
+.login-header h1 {
+    margin: 0;
+    font-size: 1.8rem;
+    letter-spacing: -0.5px;
+}
+
+.login-content {
+    padding: 40px;
+}
+
+/* Botões com novo estilo */
+.btn {
+    display: block;
+    width: 100%;
+    margin: 12px 0;
+    padding: 14px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    text-align: center;
+    transition: all 0.2s ease;
+    box-sizing: border-box;
+}
+
+.btn-primary {
+    background-color: var(--secondary-color);
+    color: var(--white);
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+}
+
+.btn-outline-green {
+    border: 2px solid var(--success-color);
+    color: var(--success-color);
+}
+
+.btn-outline-green:hover {
+    background-color: var(--success-color);
+    color: var(--white);
+}
+
+.btn-outline-gray {
+    border: 2px solid #95a5a6;
+    color: #7f8c8d;
+}
+
+/* Campos de formulário mais modernos */
+input {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    border: 2px solid #eee;
+    border-radius: 8px;
+    transition: border-color 0.3s;
+}
+
+input:focus {
+    border-color: var(--secondary-color);
+    outline: none;
+}
+    </style>
     <meta charset="UTF-8">
     <title>Sucesso - Portal de Descontos</title>
-    <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
     <div class="container" style="text-align: center;">
