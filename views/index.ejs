@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Cupons - Associação</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Gerar Cupom</h1>
+        <p style="text-align: center; color: #666; margin-bottom: 20px;">Painel do Comerciante</p>
+        
+        <form action="/gerar-cupom" method="POST">
+            <div class="form-group">
+                <label>CNPJ do Comércio</label>
+                <input type="text" name="cnpj" placeholder="00.000.000/0001-00" required>
+            </div>
+
+            <div class="form-group">
+                <label>Título da Promoção</label>
+                <input type="text" name="titulo" placeholder="Ex: 20% de desconto na Pizza" required>
+            </div>
+
+            <div style="display: flex; gap: 10px;">
+                <div class="form-group" style="flex: 1;">
+                    <label>Início</label>
+                    <input type="date" name="inicio" required>
+                </div>
+                <div class="form-group" style="flex: 1;">
+                    <label>Fim</label>
+                    <input type="date" name="fim" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>% de Desconto</label>
+                <input type="number" name="desconto" step="0.01" placeholder="Ex: 15.00" required>
+            </div>
+
+            <button type="submit">Gerar Cupons de 12 Dígitos</button>
+        </form>
+    </div>
+</body>
+</html>
