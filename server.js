@@ -1,3 +1,4 @@
+const path = require('path'); 
 const express = require('express');
 const bodyParser = require('body-parser');
 const crypto = require('crypto');
@@ -5,7 +6,8 @@ const db = require('./database');
 const app = express();
 
 app.set('view engine', 'ejs');
-app.use(express.static('public'));
+
+app.use(express.static(path.join(__dirname, 'public')));
 app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({ extended: true }));
 
