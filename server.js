@@ -30,6 +30,26 @@ app.get('/cadastro-comercio', (req, res) => {
     res.render('cadastro-comercio');
 });
 
+// Rota para processar o cadastro do comércio
+app.post('/registrar-comercio', (req, res) => {
+    // Aqui os dados seriam salvos no banco sistema.db
+    const { raz_social_comercio } = req.body;
+    res.render('cadastro-sucesso', { nome: raz_social_comercio });
+});
+
+// Rota para processar o cadastro do Associado
+app.post('/registrar-associado', (req, res) => {
+    const { nom_associado } = req.body;
+    // Aqui os dados seriam salvos no SQLite
+    res.render('cadastro-sucesso', { nome: nom_associado });
+});
+
+// Rota para processar o Login
+app.post('/auth', (req, res) => {
+    // Lógica simples para a apresentação
+    res.redirect('/gerar-cupom'); 
+});
+
 app.post('/gerar-cupom', (req, res) => {
     const { cnpj, titulo, inicio, fim, desconto } = req.body;
     const hash = crypto.randomBytes(6).toString('hex').toUpperCase(); // Gera 12 caracteres
