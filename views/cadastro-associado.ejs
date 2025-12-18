@@ -2,22 +2,27 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>Novo Associado</title>
+    <title>Novo Associado - Portal de Descontos</title>
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
     <div class="container">
         <div class="login-header" style="background: linear-gradient(135deg, #27ae60, #2ecc71);">
             <h1>Novo Associado</h1>
+            <small>Crie sua conta para reservar cupons</small>
         </div>
         <div class="login-content">
             <form action="/registrar-associado" method="POST">
                 <input type="text" name="nom_associado" placeholder="Nome Completo" required>
                 <input type="text" name="cpf_associado" placeholder="CPF (Apenas números)" required>
-                <input type="email" name="email_associado" placeholder="E-mail" required>
+                <input type="email" name="email_associado" placeholder="Seu melhor e-mail" required>
                 <input type="password" name="sen_associado" placeholder="Crie uma senha" required>
-                <button type="submit" class="btn btn-primary" style="background-color: #27ae60; border:none; margin-top:20px;">Finalizar Cadastro</button>
-                <a href="/login" style="display:block; text-align:center; margin-top:15px; color:#666; text-decoration:none;">Cancelar</a>
+                
+                <button type="submit" class="btn btn-outline-green" style="width:100%; cursor:pointer; background:none;">Finalizar Cadastro</button>
+                
+                <p style="margin-top: 15px; text-align: center;">
+                    <a href="/login" style="color: #7f8c8d; text-decoration: none; font-size: 0.9rem;">← Voltar ao início</a>
+                </p>
             </form>
         </div>
     </div>

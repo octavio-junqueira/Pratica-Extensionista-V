@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Painel de Cupons</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="login-header">
+            <h1>Gerar Novo Cupom</h1>
+            <p>Crie descontos para os associados</p>
+        </div>
+        <div class="login-content">
+            <form id="formCupom">
+                <input type="text" placeholder="Título da Promoção (ex: 10% de desconto)" required>
+                <input type="date" title="Data de Validade" required>
+                <button type="button" onclick="gerarCodigo()" class="btn btn-primary" style="border:none; cursor:pointer;">Gerar Código de 12 Dígitos</button>
+            </form>
+
+            <div id="resultado" style="display:none; margin-top: 20px; padding: 15px; background: #f1f1f1; border-radius: 8px;">
+                <p>Código Gerado:</p>
+                <h2 id="codigoHash" style="color: #2c3e50; letter-spacing: 2px;"></h2>
+            </div>
+            
+            <a href="/login" style="display:block; margin-top: 20px; color: #7f8c8d; text-decoration: none;">Sair do Painel</a>
+        </div>
+    </div>
+
+    <script>
+        function gerarCodigo() {
+            // Gera um código aleatório de 12 caracteres (Letras e Números)
+            const caracteres = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+            let hash = '';
+            for (let i = 0; i < 12; i++) {
+                hash += caracteres.charAt(Math.floor(Math.random() * caracteres.length));
+            }
+            document.getElementById('codigoHash').innerText = hash;
+            document.getElementById('resultado').style.display = 'block';
+        }
+    </script>
+</body>
+</html>

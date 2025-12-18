@@ -50,6 +50,11 @@ app.post('/auth', (req, res) => {
     res.redirect('/gerar-cupom'); 
 });
 
+// Rota para abrir o painel de geração de cupons
+app.get('/gerar-cupom', (req, res) => {
+    res.render('gerar-cupom');
+});
+
 app.post('/gerar-cupom', (req, res) => {
     const { cnpj, titulo, inicio, fim, desconto } = req.body;
     const hash = crypto.randomBytes(6).toString('hex').toUpperCase(); // Gera 12 caracteres
