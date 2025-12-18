@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Novo Associado</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="login-header" style="background: linear-gradient(135deg, #27ae60, #2ecc71);">
+            <h1>Novo Associado</h1>
+        </div>
+        <div class="login-content">
+            <form action="/registrar-associado" method="POST">
+                <input type="text" name="nom_associado" placeholder="Nome Completo" required>
+                <input type="text" name="cpf_associado" placeholder="CPF (Apenas números)" required>
+                <input type="email" name="email_associado" placeholder="E-mail" required>
+                <input type="password" name="sen_associado" placeholder="Crie uma senha" required>
+                <button type="submit" class="btn btn-primary" style="background-color: #27ae60; border:none; margin-top:20px;">Finalizar Cadastro</button>
+                <a href="/login" style="display:block; text-align:center; margin-top:15px; color:#666; text-decoration:none;">Cancelar</a>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

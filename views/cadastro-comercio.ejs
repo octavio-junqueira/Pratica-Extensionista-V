@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Novo Comércio - Portal de Descontos</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="login-header">
+            <h1>Novo Comércio</h1>
+            <small>Cadastre seu estabelecimento</small>
+        </div>
+        <div class="login-content">
+            <form action="/registrar-comercio" method="POST">
+                <input type="text" name="raz_social_comercio" placeholder="Razão Social" required>
+                <input type="text" name="nom_fantasia_comercio" placeholder="Nome Fantasia" required>
+                <input type="text" name="cnpj_comercio" placeholder="CNPJ (apenas números)" required>
+                <input type="email" name="email_comercio" placeholder="E-mail Comercial" required>
+                <input type="password" name="sen_comercio" placeholder="Crie uma senha" required>
+                
+                <button type="submit" class="btn btn-primary" style="border:none; margin-top: 20px;">Finalizar Cadastro</button>
+                
+                <p style="margin-top: 15px;">
+                    <a href="/login" style="color: #7f8c8d; text-decoration: none; font-size: 0.9rem;">← Cancelar e Voltar</a>
+                </p>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

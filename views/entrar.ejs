@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Login - Portal de Descontos</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="login-header">
+            <h1>Acessar Conta</h1>
+            <small>Entre com seu CPF ou CNPJ</small>
+        </div>
+        <div class="login-content">
+            <form action="/auth" method="POST">
+                <div style="text-align: left; margin-bottom: 15px;">
+                    <label style="font-weight: bold; color: #2c3e50;">Identificador</label>
+                    <input type="text" name="identificador" placeholder="CPF ou CNPJ (apenas números)" required>
+                </div>
+                <div style="text-align: left; margin-bottom: 20px;">
+                    <label style="font-weight: bold; color: #2c3e50;">Senha</label>
+                    <input type="password" name="senha" placeholder="••••••••" required>
+                </div>
+                <button type="submit" class="btn btn-primary" style="border:none; cursor:pointer;">Entrar no Sistema</button>
+                <p style="margin-top: 20px;">
+                    <a href="/login" style="color: #7f8c8d; text-decoration: none; font-size: 0.9rem;">← Voltar ao Portal</a>
+                </p>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

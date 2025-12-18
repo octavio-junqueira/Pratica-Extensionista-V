@@ -6,9 +6,29 @@ const app = express();
 
 app.set('view engine', 'ejs');
 app.use(express.static('public'));
+app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get('/', (req, res) => res.render('index'));
+
+app.get('/login', (req, res) => {
+    res.render('login');
+});
+
+// Rota para a tela de Login (Credenciais CPF/CNPJ)
+app.get('/entrar', (req, res) => {
+    res.render('entrar');
+});
+
+// Rota para Cadastro de Associado (CPF)
+app.get('/cadastro-associado', (req, res) => {
+    res.render('cadastro-associado');
+});
+
+// Rota para Cadastro de Comércio (CNPJ)
+app.get('/cadastro-comercio', (req, res) => {
+    res.render('cadastro-comercio');
+});
 
 app.post('/gerar-cupom', (req, res) => {
     const { cnpj, titulo, inicio, fim, desconto } = req.body;
@@ -19,4 +39,4 @@ app.post('/gerar-cupom', (req, res) => {
     });
 });
 
-app.listen(3000, () => console.log("Servidor em: http://localhost:3000"));
+app.listen(3000, () => console.log("Servidor rodando! Acesse: http://localhost:3000/login"));
